@@ -24,7 +24,7 @@ class MemberFactory {
     premium: PremiumMembership,
   };
 
-  create(name, type = "trial") {
+  createUser(name, type = "trial") {
     const Membership = MemberFactory.list[type] || MemberFactory.list.trial;
     const member = new Membership(name);
     member.type = type;
@@ -40,9 +40,9 @@ class MemberFactory {
 const factory = new MemberFactory();
 
 const members = [
-  factory.create("Alice"),
-  factory.create("John", "premium"),
-  factory.create("Mark", "standard"),
+  factory.createUser("Alice"),
+  factory.createUser("John", "premium"),
+  factory.createUser("Mark", "standard"),
 ];
 
 members.forEach((m) => {
