@@ -1,6 +1,8 @@
 class MacBook {
   constructor() {
     this.model = "Air";
+    this.processor = "IntelCore i7";
+    this.color = "Silver";
   }
 }
 
@@ -19,7 +21,7 @@ class MacBookBuilder {
     return this;
   }
 
-  chooseColor(color) {
+  changeColor(color) {
     this.MacBook.color = color;
     return this;
   }
@@ -29,10 +31,14 @@ class MacBookBuilder {
   }
 }
 
-const myMacBook = new MacBookBuilder()
+const myMacBook1 = new MacBookBuilder().updateMemory("512Gb").build();
+
+console.log(myMacBook1);
+
+const myMacBook2 = new MacBookBuilder()
   .updateProcessor("M1")
-  .updateMemory("512Gb")
-  .chooseColor("Silver")
+  .updateMemory("1Tb")
+  .changeColor("Gold")
   .build();
 
-console.log(myMacBook);
+console.log(myMacBook2);
