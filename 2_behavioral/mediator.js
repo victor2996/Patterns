@@ -7,7 +7,7 @@ class AppleDealer {
     const name = customer.getName();
 
     console.log(`Order name: ${name}. Order device is ${device}`);
-    console.log(`Additional info: ${info}.`);
+    console.log(`Additional info: ${info}.\n`);
     this.addToCustomerList(name);
   }
 
