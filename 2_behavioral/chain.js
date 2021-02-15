@@ -6,7 +6,7 @@ class Account {
       console.log(`Cannot pay using ${this.name}`);
       this.incomer.pay(orderPrice);
     } else {
-      console.log(`Unfortunately not enough money on ${this.name}`);
+      console.log(`Unfortunately not enough money`);
     }
   }
 
