@@ -21,10 +21,10 @@ console.log(mysql.getData()); // MySQL
 const mongo = new Database("MongoDB");
 console.log(mongo.getData()); // MySQL
 
-const db2 = new Database("DB2");
+const db2 = new Database("DB2e");
 console.log(db2.getData()); // MySQL
 
-// Singletone another sample (Counter)
+// Singletone another sample (Counter)d
 
 class Counter {
   constructor() {
